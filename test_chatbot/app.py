@@ -5,9 +5,8 @@ from rag import rag_chain
 
 load_dotenv()
 
-# app config
-st.set_page_config(page_title="Streamlit Chatbot", page_icon="🤖")
-st.title("Chatbot")
+st.set_page_config(page_title="Doctor AI Chatbot", page_icon="🤖")
+st.title("Doctor AI chatbot")
 
 def get_response(user_query, chat_history):
     return rag_chain.invoke({
@@ -15,13 +14,11 @@ def get_response(user_query, chat_history):
         "input": user_query,
     })
 
-# session state
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
         AIMessage(content="สวัสดี! ฉันเป็นแพทย์ AI ที่สามารถช่วยตอบคำถามเกี่ยวกับโรคและอาการของผู้ป่วยได้ กรุณาถามมาได้เลย!"),
     ]
 
-# conversation
 for message in st.session_state.chat_history:
     if isinstance(message, AIMessage):
         with st.chat_message("AI"):
@@ -30,7 +27,6 @@ for message in st.session_state.chat_history:
         with st.chat_message("Human"):
             st.write(message.content)
 
-# user input
 user_query = st.chat_input("Type your message here...")
 if user_query is not None and user_query != "":
     st.session_state.chat_history.append(HumanMessage(content=user_query))
