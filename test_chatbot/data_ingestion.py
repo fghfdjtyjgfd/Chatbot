@@ -1,5 +1,3 @@
-# pip install tf_keras chromadb
-
 from bs4 import BeautifulSoup
 import os
 import re
