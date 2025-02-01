@@ -11,12 +11,10 @@ from langchain.prompts import MessagesPlaceholder
 
 load_dotenv()
 
-openai_key = os.getenv("OPENAI_API_KEY")
 dataset = "dataset"
 file = "data.txt"
 file_path = os.path.join(dataset, file)
 chroma = "Chroma"
-store = {}
 
 contextualize_system_prompt = """
 ให้ประวัติการสนทนาและคำถามล่าสุดของผู้ใช้  
