@@ -16,6 +16,9 @@ This chatbot can **retrieve relevant medical knowledge** and **answer user queri
 
 ---
 
+![image](https://github.com/user-attachments/assets/942e0b48-a123-4a81-9128-a9d61a04b476)
+
+
 ## 📂 Project Structure
 📄 app.py # Streamlit interface
 
