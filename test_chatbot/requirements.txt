@@ -1,0 +1,9 @@
+langchain
+langchain_core
+langchain_chroma
+langchain_community
+langchain_huggingface
+bs4
+chromadb
+streamlit
+python-dotenv
