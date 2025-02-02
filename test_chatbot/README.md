@@ -24,6 +24,8 @@ This chatbot can **retrieve relevant medical knowledge** and **answer user queri
 
 📄 rag.py # Main RAG logic (Retriever, LLM, Memory) 
 
+📄 data_ingestion.py # Documents retrieval from client's website
+
 📄 requirements.txt # Python dependencies 
 
 📄 README.md # Project documentation 
